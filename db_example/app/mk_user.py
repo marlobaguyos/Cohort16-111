@@ -18,3 +18,6 @@ if __name__ == "__main__":
   create_my_user("John", "Doe", "Golfing")
   user = User.query.filter_by(first_name="John").first()
   print(user)
+  create_my_user("Mark", "Pogi", "Disco")
+  user = User.query.filter_by(first_name="Mark").first()
+  print(user)
