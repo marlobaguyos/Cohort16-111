@@ -1,9 +1,8 @@
 #!/user/bin/env python3
 #-*- coding: utf8 -*-
 """Sample app"""
-
 from flask import Flask, request
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy 
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db"
@@ -22,5 +21,5 @@ def about(uid):
 
 @app.route('/agent')
 def agent():
-  user_agent = request.header.get("User-Agent")
+  user_agent = request.headers.get("User-Agent")
   return "<p>Your user agent is %s</p>" % user_agent
