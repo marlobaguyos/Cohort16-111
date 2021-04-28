@@ -2,7 +2,7 @@
 #-*- coding: utf8 -*-
 """Sample app"""
 
-from flask import Flask
+from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -19,3 +19,8 @@ def about(uid):
     "last_name": user.last_name,
     "hobbies": user.hobbies
   }
+
+@app.route('/agent')
+def agent():
+  user_agent = request.header.get("User-Agent")
+  return "<p>Your user agent is %s</p>" % user_agent

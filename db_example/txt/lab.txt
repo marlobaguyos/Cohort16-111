@@ -69,4 +69,12 @@ sqlite> SELECT * FROM user;
 1|Marlo|Baguyos|Garage WorkOUT
 sqlite>  
 
-test pogi
+Create your environment
+1. make sure you have requirements.txt
+	pip3 freeze > requirements.txt
+2. deactivate 
+3. rm -rf venv
+4. Create a New environment
+		python3 -m venv venv
+5. activate - source venv/bin/activate
+6. pip3 install -r requirements.txt
