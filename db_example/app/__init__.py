@@ -2,7 +2,8 @@
 #-*- coding: utf8 -*-
 """Sample app"""
 from flask import Flask, request
-from flask_sqlalchemy import SQLAlchemy 
+import sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///mydb.db"
