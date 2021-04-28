@@ -27,4 +27,4 @@ def agent():
 
 @app.route("/hello/<name>")
 def hello(name):
-  return render_template("hello.html", name=name)
+  return render_template("hello.html", name=name, something=whatever)
