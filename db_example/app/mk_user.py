@@ -14,7 +14,7 @@ def create_my_user(first_name, last_name, hobbies):
 if __name__ == "__main__":
   create_my_user("Marlo", "Baguyos", "Movie")
   user = User.query.all()
-  print(users)
+  print(user)
   create_my_user("John", "Doe", "Golfing")
   user = User.query.filter_by(first_name="John").first()
   print(user)
