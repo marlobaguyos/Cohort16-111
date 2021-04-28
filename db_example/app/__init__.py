@@ -1,7 +1,7 @@
 #!/user/bin/env python3
 #-*- coding: utf8 -*-
 """Sample app"""
-from flask import Flask, request
+from flask import Flask, request, render_template
 import sqlalchemy
 from flask_sqlalchemy import SQLAlchemy
 
@@ -24,3 +24,7 @@ def about(uid):
 def agent():
   user_agent = request.headers.get("User-Agent")
   return "<p>Your user agent is %s</p>" % user_agent
+
+@app.route("/hello/<name>")
+def hello(name):
+  return render_template("hello.html", name=name)
