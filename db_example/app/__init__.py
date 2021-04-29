@@ -14,11 +14,7 @@ from app.database import *
 @app.route("/about/<int:uid>")
 def about(uid):
   user = User.query.filter_by(id=uid).first()
-  return {
-    "first_name": user.first_name,
-    "last_name": user.last_name,
-    "hobbies": user.hobbies
-  }
+  return render_template("about.html", user=user )
 
 @app.route('/agent')
 def agent():
@@ -27,4 +23,5 @@ def agent():
 
 @app.route("/hello/<name>")
 def hello(name):
+  whatever = 1
   return render_template("hello.html", name=name, something=whatever)
