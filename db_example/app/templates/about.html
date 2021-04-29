@@ -6,4 +6,5 @@
   <h1>About: {{ user.first_name }}</h1>
   <p>Hello, my name is {{ user.first_name }} {{ user.last_name}}.</p>
   <p>My favorite hobby is: {{ user.hobbies }}</p>
+  <img src="{{url_for('static', filename='naruto.jpg') }}" style="width: 40%">
 {% endblock content %}
