@@ -25,3 +25,7 @@ def agent():
 def hello(name):
   whatever = 1
   return render_template("hello.html", name=name, something=whatever)
+
+@app.errorhandler(404)
+def page_not_found(e):
+  return render_template("404.html"), 404
